@@ -1,16 +1,28 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+
+import EventPage from "./Pages/EventPage"
+import RegisterPage from "./Pages/RegisterPage"
+import ReviewPage from "./Pages/ReviewPage"
+import ConfirmationPage from "./Pages/ConfirmationPage"
+import SubmittedPage from "./Pages/SubmittedPage"
+
 function App() {
   return (
-    <div className="flex items-center justify-center h-screen bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-blue-600">
-          Tech Innovation Conference
-        </h1>
+    <Router>
+      <Routes>
 
-        <p className="mt-4 text-lg">
-          Registration System Setup Complete
-        </p>
-      </div>
-    </div>
+        <Route path="/" element={<EventPage />} />
+
+        <Route path="/register" element={<RegisterPage />} />
+
+        <Route path="/review" element={<ReviewPage />} />
+
+        <Route path="/confirm" element={<ConfirmationPage />} />
+
+        <Route path="/submitted" element={<SubmittedPage />} />
+
+      </Routes>
+    </Router>
   )
 }
 
