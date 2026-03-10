@@ -1,4 +1,7 @@
-import { useNavigate, useEffect, useState } from "react-router-dom"
+// Correct
+import { useEffect, useState } from "react"        // ✅ React provides useEffect
+import { useNavigate } from "react-router-dom"     // ✅ Only routing functions here
+
 
 function SubmittedPage() {
   const navigate = useNavigate()
